@@ -29,3 +29,69 @@
 - Check Slack to 'Hello World' Message
 
 <img width="1512" alt="Screenshot 2024-02-04 at 21 51 07" src="https://github.com/frank-goa/my-projects/assets/137857643/8e0617ae-094a-4b6f-b12e-9ad0560d65ae">
+
+### Step 2:
+#### Creating a Lambda function
+- provide a name for the function
+- select Runtime - Python 3.8
+- Select appropriate Role
+- Create Function
+- 
+
+```bash
+import json
+import urllib3
+
+def lambda_handler(event, context):
+    http = urllib3.PoolManager()
+    
+    data = {"text": "Alert!!!... EC2 Instance Stopped..."}
+    
+    req = http.request("POST",
+                       "https://hooks.slack.com/services/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",
+                       body = json.dumps(data),
+                       headers = {"Content-Type": "application/jso"})
+    
+    # TODO implement
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Alert!!!...')
+    }
+
+```
+- Test the lambda function
+
+```bash
+Test Event Name
+test
+
+Response
+{
+  "statusCode": 200,
+  "body": "\"Alert!!!...\""
+}
+```
+
+<img width="1509" alt="Screenshot 2024-02-04 at 23 41 43" src="https://github.com/frank-goa/my-projects/assets/137857643/222c5512-e4c4-4d16-b8ff-e438a84c95fe">
+
+### Step 3:
+- Create an EC2 Instance
+- note the instance ID
+<img width="1511" alt="Screenshot 2024-02-04 at 23 51 07" src="https://github.com/frank-goa/my-projects/assets/137857643/937f0b4f-d1a1-4399-9cbe-caded1d35bbd">
+
+### Step 4:
+- Creating CloudWatch Event Rule
+<img width="1511" alt="Screenshot 2024-02-04 at 23 51 07" src="https://github.com/frank-goa/my-projects/assets/137857643/d85c88af-a116-4869-b2e1-df147107e437">
+
+<img width="1511" alt="Screenshot 2024-02-04 at 23 51 37" src="https://github.com/frank-goa/my-projects/assets/137857643/67892735-0262-431b-99d7-cf3c413724a5">
+
+<img width="1510" alt="Screenshot 2024-02-04 at 23 53 05" src="https://github.com/frank-goa/my-projects/assets/137857643/2d8e985c-188e-459d-b0b2-a75e63e01313">
+
+<img width="1511" alt="Screenshot 2024-02-04 at 23 53 23" src="https://github.com/frank-goa/my-projects/assets/137857643/9f517a78-2106-46cf-82a5-89c19c569139">
+
+<img width="1511" alt="Screenshot 2024-02-04 at 23 54 01" src="https://github.com/frank-goa/my-projects/assets/137857643/d4f1a4b4-ad77-4ecd-a15c-897f18935160">
+
+### Test:
+<img width="1512" alt="Screenshot 2024-02-05 at 00 00 11" src="https://github.com/frank-goa/my-projects/assets/137857643/aba50aa4-fba2-4f78-8181-8b6ff5c8edac">
+
+<img width="1510" alt="Screenshot 2024-02-05 at 00 01 18" src="https://github.com/frank-goa/my-projects/assets/137857643/2e23fb8d-bc50-4a0c-a631-94e9988a0c64">
