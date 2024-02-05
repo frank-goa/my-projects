@@ -1,5 +1,7 @@
 ### Cloudwatch Event rule that triggers a Lambda function which sends a Slack Notification when an EC2 Instance is stopped
 
+![Cloudwatch_lambda_Slack](https://github.com/frank-goa/my-projects/assets/137857643/eefb07f7-6ab8-4d72-8034-21454456087e)
+
 ### Step 1:
 #### Creating Slack Applcation
 - Browse to - https://api.slack.com/apps?new_app=1
