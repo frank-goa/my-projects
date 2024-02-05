@@ -98,3 +98,7 @@ Response
 <img width="1512" alt="Screenshot 2024-02-05 at 00 00 11" src="https://github.com/frank-goa/my-projects/assets/137857643/aba50aa4-fba2-4f78-8181-8b6ff5c8edac">
 
 <img width="1510" alt="Screenshot 2024-02-05 at 00 01 18" src="https://github.com/frank-goa/my-projects/assets/137857643/2e23fb8d-bc50-4a0c-a631-94e9988a0c64">
+
+- addition learning
+- https://quick-refs.github.io/aws/slack-notifications-from-aws-cloudwatch-alarms
+
