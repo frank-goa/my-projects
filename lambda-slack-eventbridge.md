@@ -22,10 +22,11 @@
 <img width="1512" alt="Screenshot 2024-02-04 at 21 47 20" src="https://github.com/frank-goa/my-projects/assets/137857643/7fa40681-8f77-49d9-a629-9d10a49fb0e0">
 - Allow Permissions
 
-<img width="1512" alt="Screenshot 2024-02-04 at 21 47 48" src="https://github.com/frank-goa/my-projects/assets/137857643/b1748318-260f-4d63-a231-6568848e532a">
-- Copy Sample Curl Request and paste it into a Terminal Window
+<img width="1512" alt="Screenshot 2024-02-04 at 21 49 40" src="https://github.com/frank-goa/my-projects/assets/137857643/7e1fe603-7a10-4ffb-aae3-495f315dd497">
 
-<img width="1512" alt="Screenshot 2024-02-04 at 21 49 40" src="https://github.com/frank-goa/my-projects/assets/137857643/a7cb9d08-63fc-413a-a2f7-321e9f1f1c7a">
+- Copy Sample Curl Request and paste it into a Terminal Window
+<img width="1512" alt="Screenshot 2024-02-04 at 21 49 40" src="https://github.com/frank-goa/my-projects/assets/137857643/3fa504eb-e523-4734-bc4e-19b57b6826b4">
+
 - Check Slack to 'Hello World' Message
 
 <img width="1512" alt="Screenshot 2024-02-04 at 21 51 07" src="https://github.com/frank-goa/my-projects/assets/137857643/8e0617ae-094a-4b6f-b12e-9ad0560d65ae">
@@ -48,7 +49,7 @@ def lambda_handler(event, context):
     data = {"text": "Alert!!!... EC2 Instance Stopped..."}
     
     req = http.request("POST",
-                       "https://hooks.slack.com/services/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",
+                       "https://hooks.slack.com/services/T06GLPQRBSB/B0XXXXXGZ/LNDvDZcXXXXXXXQG7bvn9xK",
                        body = json.dumps(data),
                        headers = {"Content-Type": "application/jso"})
     
