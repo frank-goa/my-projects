@@ -1,1 +1,13 @@
 ### Real Time DevOps Project | Deploy to Kubernetes Using Jenkins | End to End DevOps Project | CICD
+
+- Building a complete CICD Pipeline using Jenkins, Mavern, Docker and EKS
+- If developer makes any changes to the application repostory on GitHub, it triggers the CI job of Jenkins
+- Pushes the code from the application repository, builds and tests the artifacts using Mavern
+- Do the static code analytics of the artifacts using SonarQube
+- Build the Docker image, push the docker image to docker hub
+- Scan the Docker image using Trivy Scan
+- Our CD job starts 
+- updates the build number or release number of the manifest deployment yaml files on the Git Ops repository
+- ArgoCD will pull the updated manifest file and deploy the resources to EKS Cluster
+- A notification will be send to Slack channel
+
